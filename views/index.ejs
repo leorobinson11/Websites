@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head'); %>
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+    <title> Digital Marketing Agency - Higher SEO Consultants </title>
+    <meta name="description" content="...">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "How long does the restructoring of the site take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "<p> Depends on the size of the site, but usualy inbetween 5-10 days.</p>"
+            }
+          }, {
+            "@type": "Question",
+            "name": "What Stage does the webpage need to be in, inorder to be restructured?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer a variarity of servises for constumers ranging from Building sites from scratch to optimizing sites that are already up and running."
+            }]
+        }
+    </script>
+</head>
+
+<body>
+    <%- include('partials/header'); %>
+    <main>
+        <section id="banner">
+            <div class="banner-text"> 
+                <h3> Web-Design Agency </h3>
+                <div class> 
+                    <h1> Create your Web-Page  With Us! </h1> 
+                </div>
+                <span class="banner-subtext"> We are a digital Marketing Agency -  Realising your visions.</span>
+                <div class="banner-btn" id="b-btn">
+                    <span> Request Meeting </span>
+                </div>
+
+                <script type="text/javascript">
+                    document.getElementById("b-btn").onclick = () => {
+                        location.href = "http://localhost:3000/contact";
+                    };
+                </script>
+            </div>
+            <div id="solar-system">
+                <div id="earth">
+                    <img src="images/earth.png" alt="Pixilated earth">
+                </div>
+                <div id="saturn">
+                    <img src="images/saturn.png" alt="Pixilated saturn">
+                </div>
+                <div id="rocket">
+                    <img src="images/rocket.png" alt="Pixilated rocket">
+                </div>
+            </div>
+            <script type="text/javascript">
+                const rocket = document.getElementById('rocket');
+                document.addEventListener('scroll', () => {
+                    rocket.style.animation = "fly 2s ease-in forwards";
+                    rocket.children[0].src = "images/rocket-flying.png";
+                });
+            </script>
+        </section>
+
+        <section id="goals">
+            <div class="text-box">
+                <h2> What do we do? </h2>
+                <h3> Create costum Websites </h3>
+                <p> For all Buisnesses the most important thing is it's Website </p>
+                <p> With our servise we enable: </p>
+                <ul>
+                    <li> Higher <b>traffic</b> </li>
+                    <li> Higher <b>costumer conversion</b> </li>
+                    <li> Higher <b>engagment</b> </li>
+                </ul>
+                <span id="description-link"> Full <span id="description-btn"><a href="/description">Servise Description</a> </span></span>
+            </div>
+        </section>
+
+        <section id="servises">
+            <div class="servises-container">
+                <div class="servise-rim">
+                    <div class="servise-box">
+                        <h2> Static Website </h2>
+                        <ul>
+                            <li> Wiget </li>
+                            <li> Increase <strong>traffic</strong></li>
+                            <li> Increase in <strong>organic searches</strong></li>
+                            <li> Increase in costumer <strong>relavancy</strong> and <strong>conversion</strong></li>
+                        </ul>
+                    </div>
+                    <div class="s-info"> 
+                        600$ + 50$/extra page 
+                    </div>
+                </div>
+                
+                <div class="servise-rim">
+                    <div class="servise-box">
+                        <h2> Dynamic Website </h2>
+                        <ul>
+                            <li> Wiget </li>
+                            <li> Optimize <strong>pages code</strong> </li>
+                            <li> Increase site <strong>visability</strong> </li>
+                            <li> <strong>Troubleshoot</strong> ranking failures </li>
+                            <li> <strong> Maximize </strong> site speed </li>
+                        </ul>
+                    </div>
+                    <div class="s-info"> 
+                        Information 
+                    </div>
+                </div>
+
+                <div class="servise-rim">
+                    <div class="servise-box">
+                        <h2> Backend </h2>
+                        <ul>
+                            <li> Wiget </li>
+                            <li> Increase the pages <strong>ranking</strong> </li>
+                            <li> Increase <strong>redirects</strong> from other pages </li>
+                            <li> <strong>Connect</strong> with similar pages </li>
+                        </ul>
+                    </div>
+                    <div class="s-info"> 
+                        Information 
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <br><br><br>
+            Some Graphic
+            <br><br><br>
+        </section>
+    </main>
+    <%- include('partials/footer'); %>
+</body>
+</html>

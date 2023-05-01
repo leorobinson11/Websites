@@ -1,0 +1,61 @@
+.form-outerbox {
+    margin-left: 20%;
+}
+
+.form-box {
+    width: 40%;
+    padding: 50px;
+    flex-direction: column;
+    background-color: rgb(226, 141, 130);
+}
+
+.form-box input, textarea {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: black;
+}
+
+.desc {
+    color: white;
+}
+
+.req {
+    color: rgb(156, 2, 2);
+}
+
+#send-btn {
+    background-color: black;
+    color: white;
+    padding: 15px 40px 15px;
+    border: solid;
+    border-radius: 8px;
+    font-size: 30px;
+}
+
+#socials-container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: min-content;
+}
+.socials-box {
+    padding: 40px;
+    padding-inline: 70px;
+    width: 200px;
+    text-align: center;
+    background-color: rgb(22, 21, 21);;
+    margin: 80px;
+    margin-inline: 20px;
+    color: white;
+}
+
+.socials-box a {
+    text-decoration: none;
+    color: rgb(187, 184, 184);
+}

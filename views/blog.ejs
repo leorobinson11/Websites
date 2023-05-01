@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head'); %>
+    <title> Blog </title>
+</head>
+
+<style>
+    .title-box {
+        text-align: center;
+        border-bottom: 1px solid rgb(135, 132, 132);
+        background-color: rgb(228, 223, 223);
+    }
+    h1 {
+        font-size: 80px;
+    }
+    #Posts-list {
+        margin: 80px;
+    }
+    
+
+</style>
+
+<body>
+    <%- include('partials/header'); %>
+    <main>
+        <section id="Posts">
+            <div class="title-box" style="padding-top: 180px;">
+                <h1> Posts </h1>
+                <p> View recent posts bellow </p>
+            </div>
+            <div id="Posts-list">
+                <% for (let i = 0; i < posts.length; i++) { %>
+                    <div class="blog-box">
+                        <h2 class="blog-tilte"> <%= posts[i].title %></h2>
+                        <span class="date-posted"> <%= posts[i].date %></span>
+                        <p class="description"> <%= posts[i].description %></p>
+                    </div>
+                <% } %>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer'); %>
+</body>
+</html>

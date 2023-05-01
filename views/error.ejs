@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head'); %>
+    <title> 404 - Page not found</title>
+</head>
+
+<body>
+    <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -40%);">
+        <h1 style="font-size: 60px;"> <%= err.status %> - Opps! </h1>
+        <p style="font-size: 30px;"> <%= err.message %> </p>
+        <a style="font-size: 30px;" href="/"> Return to Homepage </a>
+    </div>
+</body>
+</html>

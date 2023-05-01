@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head'); %>
+    <title> Request </title>
+    <link rel="stylesheet" type="text/css" href="styles/contact.css" />
+</head>
+
+<body>
+    <%- include('partials/header'); %>
+    <main>
+        <section id="contact-request" style="padding: 180px 0 120px; background-color: rgb(228, 223, 223);">
+            <div class="form-outerbox">
+            <h3> We will contact you as soon as possible </h3>
+                <div class="form-box">
+                    <form action="/conformation" method="post" name="userimput">
+                        <span class="desc"> Your Name <span class="req">*</span></span>
+                        <input type="text" name="Name" placeholder="Enter your full name" required>
+                        <span class="desc"> E-Mail <span class="req">*</span></span>
+                        <input type="text" name="Email" placeholder="example@company.com" required>
+                        <span class="desc"> Phone Number </span>
+                        <input type="text" name="Phonenumber" type="tel" placeholder="Enter your phonenumber">
+                        <span class="desc"> Company </span>
+                        <input type="text" name="Company" placeholder="Enter your company name">
+                        <span class="desc"> Message<span class="req">*</span> </span>
+                        <textarea name="Message" maxlength="50" placeholder="Your Message (Max 300 characters)"></textarea required>
+                        <button type="submit" id="send-btn"> Send </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section id="socials">
+            <div id="socials-container">
+                <div class="socials-box">
+                    <h3> EMAIL </h3>
+                    <span><a href="email@gmail.com"> email@gmail.com </a></span>
+                </div>
+                <div class="socials-box">
+                    <h3> PHONE </h3>
+                    <span><a href="tel:+number"> +number </a></span>
+                </div>
+                <div class="socials-box">
+                    <h3> FACEBOOK </h3>
+                    <span><a href="facebook.com"> fusername </a></span>
+                </div>
+                <div class="socials-box">
+                    <h3> INSTAGRAM </h3>
+                    <span><a href="instagram.com"> iusername </a></span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer'); %>
+</body>

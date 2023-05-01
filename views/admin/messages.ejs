@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../styles/admin.css" />
+    <title> Admin - Messages</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1> Messages </h1>
+        <div id="table-div">
+            <table id="messagesT">
+                <thead>
+                    <tr>
+                        <th> ID </th>
+                        <th> <b>Name</b> </th>
+                        <th> <b>Company</b> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%  for (let i = 0; i < results.length; i++) { %>
+                        <tr class="message">
+                            <td> <%= i + 1 %> </td>
+                            <td class="v"> <%= results[i].Name %> </td>
+                            <td class="v"> <%= results[i].Company %> </td>
+                            <td class="v" style="display: none;"> <%= results[i].Email %> </td>
+                            <td class="v" style="display: none;"> <%= results[i].Phonenumber %> </td>
+                            <td class="v" style="display: none;"> <%= results[i].Message %> </td>
+                            <td class="v" style="display: none;"> <%= results[i].ID %> </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="message-popup">
+        <input class="f" name="ID" style="display: none;">
+        <span class="text"><b> Name: </b> <span class="f"></span></span> <br>
+        <span class="text"><b> Company: </b> <span class="f"></span></span> <br>
+        <span class="text"><b> Email: </b> <span class="f"></span></span><br>
+        <span class="text"><b> Phonenumber: </b> <span class="f"></span></span><br>
+        <span class="text"><b> Message: </b> <span class="f"></span></span><br>
+        <a class="f" id="delete-btn" href="#"> Delete </a>
+    </div>
+
+    <script type="text/javascript">
+        console.log('x')
+        const openMessage = function(e) {
+            // showing the form
+            const popup = document.getElementById('message-popup');
+            popup.style.display = 'flex';
+
+            let values = e.getElementsByClassName('v')
+            let fields = document.getElementsByClassName('f')
+
+            for (let i=1; i < values.length+1; i++) {
+                if(fields[i].id === "delete-btn") {
+                    fields[i].href = `/admin/messages/${values[i-1].innerHTML.trim()}`;
+                } else {
+                    fields[i].innerHTML =  values[i-1].innerHTML;
+                };
+            };
+        };
+        
+        
+        const messages = document.getElementsByClassName('message');
+        for (message of messages) {
+            message.setAttribute('onclick', 'openMessage(this)');
+        };
+    </script>
+
+</body>
+</html>

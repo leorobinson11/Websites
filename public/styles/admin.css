@@ -1,0 +1,86 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 30px;
+    font-family: sans-serif;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    margin-left: 15%;
+    width: 50%;
+    padding: 10px;
+    color: black;
+    padding: 30px;
+    padding-top: 60px;
+    border: 1px solid black;
+}
+
+#table-div {
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+#messagesT {
+    width: 100%;
+    font-size: 30px;
+}
+
+#messagesT, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#messagesT th {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#messagesT td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+#messagesT tbody tr:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+#message-popup {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    left: 82%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 30px;
+    padding: 30px;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 400px;
+}
+
+#message-form {
+    line-height: 2;
+}
+
+
+#delete-btn {
+    background-color: black;
+    color: white;
+    padding: 15px 40px 15px;
+    margin-top: 30px;
+    border: solid;
+    border-radius: 8px;
+    font-size: 30px;
+    width: min-content;
+    text-decoration: none;
+}
+
+#delete-btn:hover {
+    background-color: rgb(44, 43, 43);
+}
